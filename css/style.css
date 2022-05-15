@@ -3,7 +3,7 @@
     --primary: #9C27B0;
     --darkPrimary: #89119D;
     --secondary: #FFCE00;
-    --darkSecondary: rgb(233,287,2);
+    --darkSecondary: rgb(233, 187, 2);
     --white: #FFF;
     --black: #000;
 
@@ -35,7 +35,7 @@ a{
     text-decoration: none;
 }
 img{
-    max-width: 100%;
+    width: 100%;
 }
 .container{
     max-width: 120rem;
@@ -112,9 +112,6 @@ h3{
     background-color: var(--darkPrimary);
     padding: 1rem;
 }
-.product__image{
-    width: 100%;
-}
 .product__name{
     font-size: 4rem;
 }
@@ -163,7 +160,6 @@ h3{
         column-gap: 2rem;
     }
 }
-
 .about-us__image{
     grid-row: 1 / 2;
 }
@@ -183,17 +179,57 @@ h3{
         grid-template-columns: repeat(4, 1fr);
     }
 }
-.block{
-    text-align: center;
-}
-.block__image{
-    width: 100%;
-}
 @media (min-width: 768px) {
     .block__image{
         width: 50%;
-    }    
+    }
+}
+.block{
+    text-align: center;
 }
 .block__title{
     margin: 0;
+}
+
+/** Products **/
+@media (min-width: 768px) {
+    .t-shirt{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+.form{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+.form__select{
+    border-color: var(--darkPrimary);
+    border-width: 1rem;
+    border-style: solid;
+    /** Todo lo anterior se puede meter en una única línea
+    border: ancho estilo color 
+
+    border: 1rem solid var(--darkPrimary); **/
+    /*background-color: transparent;*/
+    /*color: var(--white);*/
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1rem;
+    appearance: none; 
+}
+.form__submit{
+    background-color: var(--secondary);
+    border: none;
+    font-size: 2rem;
+    font-family: var(--mainfont);
+    padding: 2rem;
+    transition: background-color .6s ease;
+    grid-column: 2 / 3;
+}
+
+.form__submit:hover{
+    cursor: pointer;
+    background-color: var(--darkSecondary);
 }
